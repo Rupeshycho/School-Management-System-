@@ -1,0 +1,64 @@
+/* Navbar container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    position: fixed; /* keeps it on top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3); /* transparent black */
+    z-index: 10; /* on top of everything */
+    backdrop-filter: blur(8px); /* optional: adds blur behind */
+}
+
+/* Logo */
+.navbar .logo img {
+    height: 60px;
+    width: auto;
+}
+
+/* Menu links */
+.nav-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 25px;
+}
+
+/* Menu items */
+.nav-links li a, .nav-links li select {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    background: transparent;
+    border: none;
+    font-size: 16px;
+}
+
+/* Select dropdown */
+.nav-links li select {
+    color: white;
+    background: rgba(0,0,0,0); /* fully transparent */
+    border: 1px solid white;
+    padding: 5px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Apply button */
+.apply-btn button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: #ff4d4d;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.apply-btn button:hover {
+    background-color: #e60000;
+}

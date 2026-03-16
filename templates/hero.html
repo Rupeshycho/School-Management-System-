@@ -1,0 +1,44 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Section</title>
+    <link rel="stylesheet" href=" {% static 'css/hero.css' %}">
+</head>
+<body>
+    <section class="hero">
+
+    <!-- Background Video -->
+    <video autoplay muted loop playsinline class="bg-video">
+        <source src="{% static 'videos/letslearnvideo.mp4' %}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Dark overlay -->
+    <div class="overlay"></div>
+
+    <!-- Navbar -->
+    {% comment %} {% include 'navbar.html' %} {% endcomment %}
+
+    <!-- Hero content -->
+    <div class="hero-content">
+        <h1>Shape Your Future in Technology</h1>
+        <p>Excellence in Education, Innovation in Practice</p>
+        <a href="#" class="hero-btn">Explore Your Options</a>
+    </div>
+</section>
+<button id="unmuteBtn">Unmute</button>
+<script>
+    const video = document.getElementById('heroVideo');
+    const btn = document.getElementById('unmuteBtn');
+
+    btn.addEventListener('click', () => {
+        video.muted = false;  // Unmute
+        video.play();         // Ensure it starts playing
+    });
+</script>
+</body>
+</html>

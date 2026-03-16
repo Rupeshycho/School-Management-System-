@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar </title>
+    {% comment %} <link rel="stylesheet" href=" {% static 'css/navbar.css' %} "> {% endcomment %}
+    <style>
+        /* Navbar container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    position: fixed; /* keeps it on top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3); /* transparent black */
+    z-index: 10; /* on top of everything */
+    backdrop-filter: blur(8px); /* optional: adds blur behind */
+}
+
+/* Logo */
+.navbar .logo img {
+    height: 60px;
+    width: auto;
+}
+
+/* Menu links */
+.nav-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 25px;
+}
+
+/* Menu items */
+.nav-links li a, .nav-links li select {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    background: transparent;
+    border: none;
+    font-size: 16px;
+}
+
+/* Select dropdown */
+.nav-links li select {
+    color: white;
+    background: rgba(0,0,0,0); /* fully transparent */
+    border: 1px solid white;
+    padding: 5px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Apply button */
+.apply-btn button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: #ff4d4d;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.apply-btn button:hover {
+    background-color: #e60000;
+}
+    </style>
+</head>
+<body>
+    <div class="logo"> <a href=""><img src="{% static '/images/letslearn.png' %}" alt="letslearnlogo"></a></div>
+    <div>
+        <li>
+            <a href="#About-us">
+                <select name="about-us-items" id="aboutus">
+                    <option value="">About College       </option>
+                    <option value="">Coventry University </option>
+                    <option value="">Scholarship         </option>
+                    <option value="">Extended Education  </option>
+                </select>
+            </a>
+        </li>
+        <li><a href="#">COURSES    </a></li>
+        <li><a href="#">CONTACT US  </a></li>
+        <li><a href="#"><button>APPLY NOW! </button> </a> </li>
+    </div>
+    
+</body>
+</html>
